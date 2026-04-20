@@ -20,13 +20,17 @@
         
         /* Header */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('balcony.avif') center/cover no-repeat;
             color: white;
-            padding: 60px 20px;
+            padding: 100px 20px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             position: relative;
             overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .header::before {
@@ -36,8 +40,9 @@
             right: -10%;
             width: 500px;
             height: 500px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
             border-radius: 50%;
+            display: none;
         }
         
         .header-content {
@@ -74,6 +79,89 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 30px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .contact-section::after {
+            display: none;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .contact-card h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px 20px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+        
+        .contact-link:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+        
+        .contact-icon {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .contact-note {
+            font-size: 12px;
+            opacity: 0.85;
+            margin-top: 10px;
         }
         
         /* Gallery */
@@ -304,89 +392,6 @@
             font-size: 15px;
         }
         
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 30px;
-            margin-top: 30px;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-            text-align: center;
-        }
-        
-        .contact-section h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: white;
-        }
-        
-        .contact-section::after {
-            display: none;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .contact-card {
-            background: rgba(255,255,255,0.15);
-            padding: 30px;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            background: rgba(255,255,255,0.25);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-        
-        .contact-card h3 {
-            font-size: 16px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-        
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 15px 20px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            margin-bottom: 10px;
-        }
-        
-        .contact-link:hover {
-            background: #f0f0f0;
-            transform: scale(1.05);
-        }
-        
-        .contact-icon {
-            margin-right: 8px;
-            font-size: 18px;
-        }
-        
-        .contact-note {
-            font-size: 12px;
-            opacity: 0.85;
-            margin-top: 10px;
-        }
-        
         /* Footer */
         .footer {
             background: #2c3e50;
@@ -436,6 +441,29 @@
     </div>
     
     <div class="container">
+        <!-- Contact -->
+        <div class="contact-section">
+            <h2>📞 Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>☎️ Call Us</h3>
+                    <a href="tel:+306933452751" class="contact-link">
+                        <span class="contact-icon">📞</span>
+                        <span>+30 693 345 2751</span>
+                    </a>
+                    <p class="contact-note">Available 24/7 for bookings</p>
+                </div>
+                <div class="contact-card">
+                    <h3>💬 WhatsApp</h3>
+                    <a href="https://wa.me/306933452751?text=Hello%20I%27m%20interested%20in%20the%20apartment" target="_blank" class="contact-link">
+                        <span class="contact-icon">📱</span>
+                        <span>Message on WhatsApp</span>
+                    </a>
+                    <p class="contact-note">Quick responses • Photos on demand</p>
+                </div>
+            </div>
+        </div>
+        
         <!-- Gallery -->
         <div class="gallery">
             <h2 class="section-title">📸 Property Gallery</h2>
@@ -548,19 +576,12 @@
                 <div class="contact-card">
                     <h3>💬 WhatsApp</h3>
                     <a href="https://wa.me/306933452751?text=Hello%20I%27m%20interested%20in%20the%20apartment" target="_blank" class="contact-link">
-                        <span class="contact-icon">💬</span>
+                        <span class="contact-icon">�</span>
                         <span>Message on WhatsApp</span>
                     </a>
                     <p class="contact-note">Quick responses • Photos on demand</p>
                 </div>
-                <div class="contact-card">
-                    <h3>✉️ Email</h3>
-                    <a href="mailto:info@malakiapartment.com" class="contact-link">
-                        <span class="contact-icon">✉️</span>
-                        <span>Send Email</span>
-                    </a>
-                    <p class="contact-note">Response within 2 hours</p>
-                </div>
+
             </div>
         </div>
     </div>
