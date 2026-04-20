@@ -344,6 +344,113 @@
             font-size: 14px;
         }
         
+        /* Booking Section */
+        .booking-section {
+            background: white;
+            padding: 50px 30px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .booking-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .booking-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .booking-card p {
+            font-size: 15px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .booking-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .booking-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .booking-icon {
+            margin-right: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .booking-benefits {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #f0f0f0;
+        }
+        
+        .booking-benefits h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .benefits-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333;
+            border-left: 3px solid #667eea;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
         /* Map Section */
         .map-section {
             background: white;
@@ -480,6 +587,18 @@
                     <img src="balcony.avif" alt="Sea View Balcony">
                     <div class="gallery-label">Sea View Balcony</div>
                 </div>
+                <div class="gallery-item">
+                    <img src="dining area.avif" alt="Dining Area">
+                    <div class="gallery-label">Dining Area</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="livingroom.avif" alt="Living Room">
+                    <div class="gallery-label">Living Room</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="outside.avif" alt="Outside View">
+                    <div class="gallery-label">Outside View</div>
+                </div>
             </div>
         </div>
         
@@ -535,6 +654,30 @@
                     <div class="amenity-item">Coffee Maker</div>
                     <div class="amenity-item">Cooking Basics</div>
                     <div class="amenity-item">Long-term Stays</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Booking Section -->
+        <div class="booking-section">
+            <h2 class="section-title">📅 Book Your Stay</h2>
+            <div class="booking-container">
+                <div class="booking-card">
+                    <h3>🏨 Book on Airbnb</h3>
+                    <p>Secure your stay on the world's most trusted accommodation platform</p>
+                    <a href="https://www.airbnb.co.uk/rooms/31855345" target="_blank" class="booking-button">
+                        <span class="booking-icon">✓</span>
+                        View on Airbnb
+                    </a>
+                </div>
+                <div class="booking-benefits">
+                    <h3>Why book with us?</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">🔒 Secure booking</div>
+                        <div class="benefit-item">💰 Best prices</div>
+                        <div class="benefit-item">📱 Instant confirmation</div>
+                        <div class="benefit-item">🌟 5-star reviews</div>
+                    </div>
                 </div>
             </div>
         </div>
